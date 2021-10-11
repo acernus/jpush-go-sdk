@@ -1,3 +1,3 @@
-module gitlab.huaxingsec.com/infra/jpush-go-sdk
+module github.com/acernus/jpush-go-sdk
 
 go 1.16

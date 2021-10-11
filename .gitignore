@@ -1,5 +1,25 @@
+# Binaries for programs and plugins
+.DS_Store
+*~
+
+jpush
+
+# Output of tools: coverage tool, editor ...
+*.swp
+*.vim
+.vim_bookmarks
+*.out
+.vscode
 .idea
-logs/
-log/
-*.DS_STORE
-.DS_STORE
+output
+
+# Test binary, built with `go test -c`
+*.test
+
+# Logs
+/logs
+/log
+*.log
+
+# Dependency directories
+vendor/
