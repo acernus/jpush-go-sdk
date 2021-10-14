@@ -6,6 +6,7 @@ type PushReq struct {
 	Notification *Notification `json:"notification,omitempty"`
 	Message      *Message      `json:"message,omitempty"`
 	Callback     *Callback     `json:"callback,omitempty"`
+	Options      *Options      `json:"options,omitempty"`
 	CID          string        `json:"cid,omitempty"`
 }
 
