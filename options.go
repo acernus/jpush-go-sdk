@@ -8,5 +8,5 @@ const (
 )
 
 type Options struct {
-	ApnsProduction bool `json:"apns_production"`
+	ApnsProduction ApnsProduction `json:"apns_production"`
 }
