@@ -1,12 +1,12 @@
 package jpush
 
-type ApnsProduction string
+type ApnsProduction bool
 
 const (
-	Production ApnsProduction = "True"
-	Test       ApnsProduction = "False"
+	Production ApnsProduction = true
+	Test       ApnsProduction = false
 )
 
 type Options struct {
-	ApnsProduction string `json:"apns_production,omitempty"`
+	ApnsProduction ApnsProduction `json:"apns_production"`
 }
