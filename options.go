@@ -1,6 +1,5 @@
 package jpush
 
-
 const (
 	ThirdPartyChannelHuawei = "huawei"
 	ThirdPartyChannelXiaomi = "xiaomi"
@@ -16,6 +15,7 @@ const (
 )
 
 type Options struct {
+	TimeToLive        int                           `json:"time_to_live,omitempty"`
 	ThirdPartyChannel map[string]*ThirdPartyChannel `json:"third_party_channel,omitempty"`
 }
 
