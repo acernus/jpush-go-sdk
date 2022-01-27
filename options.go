@@ -15,7 +15,7 @@ const (
 )
 
 type Options struct {
-	TimeToLive        int                           `json:"time_to_live,omitempty"`
+	TimeToLive        *int                          `json:"time_to_live,omitempty"`
 	ThirdPartyChannel map[string]*ThirdPartyChannel `json:"third_party_channel,omitempty"`
 }
 
@@ -49,5 +49,10 @@ func (opt *Options) FillThirdPartyChannel(channelName string, param *ThirdPartyC
 		opt.ThirdPartyChannel = make(map[string]*ThirdPartyChannel)
 	}
 	opt.ThirdPartyChannel[channelName] = param
+	return opt
+}
+
+func (opt *Options) FillTimeToLive(timeToLive int) *Options {
+	opt.TimeToLive = &timeToLive
 	return opt
 }
