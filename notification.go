@@ -40,11 +40,11 @@ type QuickApp struct {
 }
 
 type Notification struct {
-	NotificationAndroid *NotificationAndroid `json:"android,omitempty"`
-	NotificationIOS     *NotificationIOS     `json:"ios,omitempty"`
-	InappMessage        *InappMessage        `json:"inapp_message,omitempty"`
-	Voip                *VOIP                `json:"voip,omitempty"`
-	Quickapp            *QuickApp            `json:"quickapp,omitempty"`
+	NotificationAndroid *NotificationAndroid   `json:"android,omitempty"`
+	NotificationIOS     *NotificationIOS       `json:"ios,omitempty"`
+	InappMessage        *InappMessage          `json:"inapp_message,omitempty"`
+	Voip                map[string]interface{} `json:"voip,omitempty"`
+	Quickapp            *QuickApp              `json:"quickapp,omitempty"`
 }
 
 func NewNotification() *Notification {
@@ -65,5 +65,7 @@ func (n *Notification) UseInAppMessage() *Notification {
 	n.InappMessage = &InappMessage{InappMessage: true}
 	return n
 }
-
-
+func (n *Notification) VOIP(req map[string]interface{}) *Notification {
+	n.Voip = req
+	return n
+}
