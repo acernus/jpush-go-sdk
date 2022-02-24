@@ -1,14 +1,16 @@
 package jpush
 
+type AndroidIntent struct {
+	Url string `json:"url"`
+}
+
 type NotificationAndroid struct {
-	Alert     string `json:"alert"`
-	Title     string `json:"title,omitempty"`
-	BuilderId int    `json:"builder_id,omitempty"`
-	LargeIcon string `json:"large_icon,omitempty"`
-	Intent    struct {
-		Url string `json:"url"`
-	} `json:"intent,omitempty"`
-	Extras map[string]interface{} `json:"extras,omitempty"`
+	Alert     string                 `json:"alert"`
+	Title     string                 `json:"title,omitempty"`
+	BuilderId int                    `json:"builder_id,omitempty"`
+	LargeIcon string                 `json:"large_icon,omitempty"`
+	Intent    *AndroidIntent         `json:"intent,omitempty"`
+	Extras    map[string]interface{} `json:"extras,omitempty"`
 }
 
 type IosPayload struct {
