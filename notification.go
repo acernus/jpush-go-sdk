@@ -12,7 +12,7 @@ type NotificationAndroid struct {
 	Intent            *AndroidIntent         `json:"intent,omitempty"`
 	Extras            map[string]interface{} `json:"extras,omitempty"`
 	DisplayForeground string                 `json:"display_foreground,omitempty"`
-	Priority          string                 `json:"priority,omitempty"`
+	Priority          int                    `json:"priority,omitempty"`
 }
 
 type IosPayload struct {
