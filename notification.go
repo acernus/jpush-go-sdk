@@ -10,9 +10,10 @@ type NotificationAndroid struct {
 	BuilderId         int                    `json:"builder_id,omitempty"`
 	LargeIcon         string                 `json:"large_icon,omitempty"`
 	Intent            *AndroidIntent         `json:"intent,omitempty"`
-	Extras            map[string]interface{} `json:"extras,omitempty"`
 	DisplayForeground string                 `json:"display_foreground,omitempty"`
 	Priority          int                    `json:"priority,omitempty"`
+	Sound             string                 `json:"sound,omitempty"`
+	Extras            map[string]interface{} `json:"extras,omitempty"`
 }
 
 type IosPayload struct {
