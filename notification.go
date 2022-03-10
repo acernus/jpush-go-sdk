@@ -5,12 +5,14 @@ type AndroidIntent struct {
 }
 
 type NotificationAndroid struct {
-	Alert     string                 `json:"alert"`
-	Title     string                 `json:"title,omitempty"`
-	BuilderId int                    `json:"builder_id,omitempty"`
-	LargeIcon string                 `json:"large_icon,omitempty"`
-	Intent    *AndroidIntent         `json:"intent,omitempty"`
-	Extras    map[string]interface{} `json:"extras,omitempty"`
+	Alert             string                 `json:"alert"`
+	Title             string                 `json:"title,omitempty"`
+	BuilderId         int                    `json:"builder_id,omitempty"`
+	LargeIcon         string                 `json:"large_icon,omitempty"`
+	Intent            *AndroidIntent         `json:"intent,omitempty"`
+	Extras            map[string]interface{} `json:"extras,omitempty"`
+	DisplayForeground string                 `json:"display_foreground,omitempty"`
+	Priority          string                 `json:"priority,omitempty"`
 }
 
 type IosPayload struct {
